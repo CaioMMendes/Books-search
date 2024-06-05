@@ -5,31 +5,31 @@ import "./globals.css"
 const jakarta = localFont({
   src: [
     {
-      path: "../assets/fonts/jakarta-sans/PlusJakartaSans-ExtraLight.ttf",
+      path: "../../public/assets/fonts/jakarta-sans/PlusJakartaSans-ExtraLight.ttf",
       weight: "200",
     },
     {
-      path: "../assets/fonts/jakarta-sans/PlusJakartaSans-Light.ttf",
+      path: "../../public/assets/fonts/jakarta-sans/PlusJakartaSans-Light.ttf",
       weight: "300",
     },
     {
-      path: "../assets/fonts/jakarta-sans/PlusJakartaSans-Regular.ttf",
+      path: "../../public/assets/fonts/jakarta-sans/PlusJakartaSans-Regular.ttf",
       weight: "400",
     },
     {
-      path: "../assets/fonts/jakarta-sans/PlusJakartaSans-Medium.ttf",
+      path: "../../public/assets/fonts/jakarta-sans/PlusJakartaSans-Medium.ttf",
       weight: "500",
     },
     {
-      path: "../assets/fonts/jakarta-sans/PlusJakartaSans-SemiBold.ttf",
+      path: "../../public/assets/fonts/jakarta-sans/PlusJakartaSans-SemiBold.ttf",
       weight: "600",
     },
     {
-      path: "../assets/fonts/jakarta-sans/PlusJakartaSans-Bold.ttf",
+      path: "../../public/assets/fonts/jakarta-sans/PlusJakartaSans-Bold.ttf",
       weight: "700",
     },
     {
-      path: "../assets/fonts/jakarta-sans/PlusJakartaSans-ExtraBold.ttf",
+      path: "../../public/assets/fonts/jakarta-sans/PlusJakartaSans-ExtraBold.ttf",
       weight: "800",
     },
   ],
@@ -48,7 +48,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      <body className={jakarta.className}>{children}</body>
+      <body className={`${jakarta.className} text-corduroy-950 min-h-screen `}>
+        {children}
+      </body>
     </html>
   )
 }
