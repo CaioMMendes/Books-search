@@ -48,7 +48,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      <body className={`${jakarta.className} text-corduroy-950 min-h-screen `}>
+      <body
+        className={`${jakarta.className} text-corduroy-950 min-h-screen bg-zinc-50 `}
+      >
         {children}
       </body>
     </html>
