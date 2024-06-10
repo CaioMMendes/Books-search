@@ -7,7 +7,7 @@ import { Button } from "./button"
 export type CardTypes = {
   image: string
   title: string
-  author: string
+  author: string[]
   categories: string[]
   synopsis: string
 }
@@ -28,7 +28,7 @@ export function Card({
       <div className="flex p-4 flex-col gap-4">
         <div className="flex flex-col">
           <h2 className="text-xl font-semibold">{title}</h2>
-          <p className="text-primary/70">{author}</p>
+          <p className="text-primary/70">{author[0]}</p>
         </div>
         <div className="flex flex-wrap">
           {categories.map((category: string) => {

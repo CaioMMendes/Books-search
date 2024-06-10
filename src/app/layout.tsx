@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import localFont from "next/font/local"
 import "./globals.css"
+import { BooksProvider } from "@/context/books-context"
 
 const jakarta = localFont({
   src: [
@@ -51,7 +52,7 @@ export default function RootLayout({
       <body
         className={`${jakarta.className} text-corduroy-950 min-h-screen bg-zinc-50 `}
       >
-        {children}
+        <BooksProvider>{children}</BooksProvider>
       </body>
     </html>
   )

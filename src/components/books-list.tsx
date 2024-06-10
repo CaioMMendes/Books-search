@@ -1,27 +1,29 @@
+import { Book } from "@/context/books-context"
 import { Card, CardTypes } from "./ui/card"
 import { v4 as uuidV4 } from "uuid"
 
-type BooksListProps = { books: CardTypes[] }
+type BooksListProps = { books: Book[] }
 
 const BooksList = ({ books }: BooksListProps) => {
   return (
     <div className="flex">
       {books.map(
         ({
-          author = "autor",
+          authors = ["autor"],
           categories = ["categoria"],
-          image = "https://m.media-amazon.com/images/I/51E2055ZGUL._AC_UF1000,1000_QL80_.jpg",
-          synopsis = "asasdasdad asda sda sda sd",
+          thumbnailUrl = "https://m.media-amazon.com/images/I/51E2055ZGUL._AC_UF1000,1000_QL80_.jpg",
+          longDescription = "asasdasdad asda sda sda sd",
           title = "Codigo limpo",
-        }: CardTypes) => {
+          _id,
+        }: Book) => {
           return (
             <Card
-              author={author}
+              author={authors}
               categories={categories}
-              image={image}
-              synopsis={synopsis}
+              image={thumbnailUrl}
+              synopsis={longDescription}
               title={title}
-              key={uuidV4()}
+              key={_id}
             />
           )
         }

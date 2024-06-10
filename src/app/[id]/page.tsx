@@ -9,12 +9,18 @@ import { v4 as uuidV4 } from "uuid"
 const BookDetailsPage = () => {
   const books = [
     {
-      author: "autor",
+      authors: ["autor"],
       categories: ["categoria"],
-      image:
+      thumbnailUrl:
         "https://m.media-amazon.com/images/I/51E2055ZGUL._AC_UF1000,1000_QL80_.jpg",
-      synopsis: "asasdasdad asda sda sda sd",
+      longDescription: "asasdasdad asda sda sda sd",
       title: "Codigo limpo",
+
+      score: 1,
+      shortDescription: "string",
+      status: "string",
+
+      _id: "string",
     },
   ]
 
@@ -29,14 +35,14 @@ const BookDetailsPage = () => {
             <div className="flex p-4 flex-col gap-4">
               <div className="flex flex-col">
                 <h2 className="text-5xl font-semibold">{books[0].title}</h2>
-                <p className="text-primary/70 text-xl">{books[0].author}</p>
+                <p className="text-primary/70 text-xl">{books[0].authors[0]}</p>
               </div>
 
-              <p className="text-lg">{books[0].synopsis}</p>
+              <p className="text-lg">{books[0].longDescription}</p>
             </div>
             <div>
               <Image
-                src={books[0].image}
+                src={books[0].thumbnailUrl}
                 alt={`${books[0].title} book`}
                 width={300}
                 height={500}
